@@ -1,0 +1,22 @@
+[
+   {
+      "objectGuid": "617rLou2cfPl6H2rMErnAC",
+      "objectName": "Krishna_Project",
+      "objectType": "Project",
+      "path": "/Explore",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "Binary",
+            "description": "Krishna Gorrepati's Project",
+            "documentState": "COMPLETE"
+         },
+         "contextAttributes": [],
+         "modelVersion": {
+            "major": 0,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": null
+      }
+   }
+]

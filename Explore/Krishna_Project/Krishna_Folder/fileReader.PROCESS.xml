@@ -1,0 +1,79 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>3QhNzUzeA8rJ4pb-gt-2416916-2019-02-14T16:14:24.88Z::pd.xml</types1:EntryId>
+      <types1:Name>fileReader</types1:Name>
+      <types1:ParentFlowIds>xxYxQ2Tp5OjG4ab-gt-663306-2019-02-14T17:15:23.379Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:PSVW12PRD1,.anonymous,Contract</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>smanes@informatica.com.demo.ga</types1:CreatedBy>
+      <types1:CreationDate>2019-02-14T16:14:25Z</types1:CreationDate>
+      <types1:ModifiedBy>smanes@informatica.com.demo.ga</types1:ModifiedBy>
+      <types1:ModificationDate>2019-02-14T17:22:31Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>smanes@informatica.com.demo.ga</types1:PublishedBy>
+      <types1:PublicationDate>2019-04-02T15:09:21Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.fileReader/fileReader.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="fileReader"
+                  name="fileReader">
+            <appliesTo/>
+            <description/>
+            <tags>Contract,.agent:PSVW12PRD1,.anonymous</tags>
+            <generator>Informatica Process Designer 10</generator>
+            <output>
+               <field description="" name="fileContent" type="textarea">
+                  <options>
+                     <option name="text_width">100</option>
+                     <option name="text_height">5</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tmp_file_Name" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>PSVW12PRD1</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="iueh5hxn" targetId="iueh5hxm"/>
+               </start>
+               <assignment id="iueh5hxm">
+                  <title>temp File Name</title>
+                  <operation source="constant" to="temp.tmp_file_Name">C:\LocalFiles\Krishna\SubErrorEventId.csv</operation>
+                  <link id="iueh5hxo" targetId="c"/>
+               </assignment>
+               <assignment id="c">
+                  <title>Assignment to fileContent</title>
+                  <operation source="formula" to="output.fileContent">
+                     <expression language="XQuery">fn:unparsed-text(fn:concat('file:///',$temp.tmp_file_Name))</expression>
+                  </operation>
+                  <link id="link2" targetId="d"/>
+               </assignment>
+               <end id="d"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>jGWHssOnh8TbgVcS16ImMU</types1:GUID>
+      <types1:DisplayName>fileReader</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-10-16T19:19:06.472Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

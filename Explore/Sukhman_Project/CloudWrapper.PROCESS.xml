@@ -1,0 +1,68 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>xxYxQ2Tp5OjG4ab-gt-663306-2019-02-14T17:15:23.379Z::pd.xml</types1:EntryId>
+      <types1:Name>CloudWrapper</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>smanes@informatica.com.demo.ga</types1:CreatedBy>
+      <types1:CreationDate>2019-02-14T17:15:23Z</types1:CreationDate>
+      <types1:ModifiedBy>smanes@informatica.com.demo.ga</types1:ModifiedBy>
+      <types1:ModificationDate>2019-04-02T15:09:11Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>smanes@informatica.com.demo.ga</types1:PublishedBy>
+      <types1:PublicationDate>2019-04-02T15:09:21Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.CloudWrapper/CloudWrapper.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="CloudWrapper"
+                  name="CloudWrapper">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedUsers>
+                     <user>smanes@informatica.com.demo.ga</user>
+                  </allowedUsers>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="js4vumih" targetId="js4vumig"/>
+               </start>
+               <subflow id="js4vumig">
+                  <title>fileReader</title>
+                  <subflowGUID>jGWHssOnh8TbgVcS16ImMU</subflowGUID>
+                  <subflowPath>fileReader</subflowPath>
+                  <runForEach>false</runForEach>
+                  <input/>
+                  <outputDef>
+                     <field name="fileContent" type="textarea">
+                        <options>
+                           <option name="text_width">100</option>
+                           <option name="text_height">5</option>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </outputDef>
+                  <link id="js4vumii" targetId="c"/>
+               </subflow>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>7Spq5xc7xIIguEPgEPojk4</types1:GUID>
+      <types1:DisplayName>CloudWrapper</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-10-16T19:19:06.55Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
